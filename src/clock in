@@ -18,7 +18,7 @@
      bs(arrangingCoins, heaters, kClosest)
      dp(uniquePath I II, paint I II)
      memorizationSearch(coinInLine I II III) 10
-6.21 dp(longestPalindromicSub I II burstBalloon) 3
+6.21 dp(longestPalindromicSub I II burstBalloon) hashMap(Isomorphic) 4
 6.22
 6.23
 6.24

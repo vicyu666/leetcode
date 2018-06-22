@@ -1,4 +1,4 @@
-package DivideConquer;
+package tree;
 
 import tree.TreeNode;
 

@@ -13,6 +13,9 @@ public class groupAnagram {
         if(strs.length==0) return new ArrayList<>();
         Map<String,List<String>> map = new HashMap<>();
         for(String s : strs) {
+            //   n: total number of words, m:longest length of word
+            // also can use arrays.sort() to get the key but it takes O(n*m*log(m))
+            // encode improve to O(n*m)
             int[] dict = new int[26];
             String encode = "";
             for(char c : s.toCharArray()) {
