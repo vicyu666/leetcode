@@ -1,0 +1,31 @@
+6.15 heap(find median, 2d trapWater)
+     stack(decodeString)
+     quickSort+bs(kthLargestInArray) 8
+6.16 unionFind(graph, sentenceSimilarity)
+     monotonousStack(largest rectangle, max tree)
+     String(count and say) 12
+6.17 2pointers(count un-dup)
+     tree(LCA)
+     bs(searchRotated, badVersion, peakElement, guessNumber, findDup)
+     2d bs(find matrix) 16
+6.18 accumulateSum(maxSub+)
+     bs(LIS)
+     divideConquer(kthEleBST)
+     sweepLine(countAirplane, skyline, meetingRoom) 7
+6.19 dp(LIS, LIP, maxSquare, stock I, robber II, maxSub(+,*))
+     memorizationSearch(LIP in matrix) 8
+6.20 bs+bst(closestVal)
+     bs(arrangingCoins, heaters, kClosest)
+     dp(uniquePath I II, paint I II)
+     memorizationSearch(coinInLine I II III) 10
+6.21 dp(longestPalindromicSub I II burstBalloon) 3
+6.22
+6.23
+6.24
+6.25
+6.26
+6.27
+6.28
+6.29
+6.30
+7.1

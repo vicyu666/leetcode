@@ -1,0 +1,12 @@
+1. 二维数组a[M][N]中，a[i][j] = a[i*N+j]。
+2. 二分查找往往是在值域里找某一个满足条件的最大最小值(第一个满足条件的值)。
+   而当查找第k个满足条件的值时，一般以数量值进行二分查找。
+3. 求数组的子数组和最好用到累加和数组，O(n)复杂度。
+4. Start with enumerate ( brute force approach, usually 1 or 2 forLoop), and improve.
+   我觉得CS是一个整体素质的体现，特别是面试时manager那一轮，
+   累的时候多看看Computer Architecture和OS以及Compiler，
+   看得多了，你会发现CS的每个领域思想都是一样的，
+   更重要的是你会终于发现这些算法究竟在实际中哪里用到了，
+   会对心态有很大帮助。而且找工作聊行业聊领域也是很重要的一部分。
+5. <<  Left shifting as a quick way to multiply by 2.
+6. 区间问题常用扫描线，拆分起点终点。
