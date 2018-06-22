@@ -78,9 +78,11 @@ public class coinInLine {
         return helperIII(nums,0,nums.length-1,flag,dp)>=(double)sum/2;
     }
     private int helperIII(int[] nums, int start, int end, int[][] flag, int[][] dp) {
+        //
         if(flag[start][end]==1)
             return dp[start][end];
         flag[start][end] = 1;
+        //
         if(start>end) dp[start][end] = 0;
         else if(start==end) dp[start][end] = nums[start];
         else if(start+1==end) dp[start][end] = Math.max(nums[start],nums[end]);

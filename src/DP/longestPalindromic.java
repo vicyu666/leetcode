@@ -21,8 +21,10 @@ public class longestPalindromic {
         return res;
     }
     private boolean helper(int i,int j,boolean[][] dp,char[] letters,int[][] flag) {
+        //
         if(flag[i][j]==1) return dp[i][j];
         flag[i][j] = 1;
+        //
         if(i>j) dp[i][j] = false;
         else if(i==j) dp[i][j] = true;
         else if(i+1==j) dp[i][j] = letters[i]==letters[j];
@@ -46,8 +48,10 @@ public class longestPalindromic {
         return max_length;
     }
     private int helper(int i,int j,int[][] dp,char[] letters,int[][] flag) {
+        //
         if(flag[i][j]==1) return dp[i][j];
         flag[i][j] = 1;
+        //
         if(i>j) dp[i][j] = 1;
         else if(i==j) dp[i][j] = 1;
         else if(i+1==j) dp[i][j] = letters[i]==letters[j]?2:1;
