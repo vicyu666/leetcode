@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class LIS {
 
     /** 300. Longest Increasing Subsequence */
-    // O(n2)
+    // O(n^2)
     public int lengthOfLIS(int[] nums) {
         int[] dp = new int[nums.length];
         Arrays.fill(dp,1);

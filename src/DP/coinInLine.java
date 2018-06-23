@@ -66,8 +66,8 @@ public class coinInLine {
     // 从两侧拿，每次只能选一侧拿一个，总值最大的人赢
     // 区间型dp，dp[i][j]代表还剩下下标从[i,j]的棋子，思路同II
     public boolean PredictTheWinner(int[] nums) {
-        int[][] dp = new int[nums.length+1][nums.length+1];
-        int[][] flag = new int[nums.length+1][nums.length+1];
+        int[][] dp = new int[nums.length][nums.length];
+        int[][] flag = new int[nums.length][nums.length];
         for(int[] f:flag) {
             Arrays.fill(f,-1);
         }

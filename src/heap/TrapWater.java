@@ -14,6 +14,8 @@ public class TrapWater {
     // ]
     //
     // Return 4
+
+    // O(mnlog(mn))
     class Cell {
         public int x, y, h;
         Cell(){}
@@ -57,6 +59,7 @@ public class TrapWater {
             visited[0][i] = 1;
             visited[row-1][i] = 1;
         }
+        // bfs
         while(!pq.isEmpty()) {
             Cell curr = pq.poll();
             for(int i=0;i<4;i++) {

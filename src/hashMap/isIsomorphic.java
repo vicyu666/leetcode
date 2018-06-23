@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class isIsomorphic {
 
-    // check map.key and also check map.value
+    // way 1: check map.key and also check map.value
     public boolean isIsomorphic(String s, String t) {
         if(s.length()!=t.length()) return false;
         Map<Character,Character> map = new HashMap<>();
@@ -19,7 +19,7 @@ public class isIsomorphic {
         return res;
     }
 
-    // check latest index
+    // way 2: check latest index
     public boolean isIsomorphic_encode(String s, String t) {
         int[] dict_s = new int[256];
         int[] dict_t = new int[256];

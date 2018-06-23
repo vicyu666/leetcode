@@ -33,6 +33,29 @@ public class longestPalindromic {
         return dp[i][j];
     }
 
+    // enumerate approach
+    public int longestPalindromeEnumerate(String s) {
+        int longest = 0;
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i; j < s.length(); j++) {
+                if (isPalindrome(s, i, j)) {
+                    longest = Math.max(longest, j - i + 1);
+                }
+            }
+        }
+        return longest;
+    }
+    private boolean isPalindrome(String s, int left, int right) {
+        while (left <= right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
     /** 516. Longest Palindromic Subsequence */
     // dp[i][j]代表下标从i到j段存在Palindromic Subsequence的最长长度
     public int longestPalindromeSubseq(String s) {
