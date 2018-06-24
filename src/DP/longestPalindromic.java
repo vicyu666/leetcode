@@ -3,7 +3,7 @@ package DP;
 public class longestPalindromic {
 
     /** 5. Longest Palindromic Substring */
-    // 区间型dp
+    // 区间型dp O(n^2)
     public String longestPalindrome(String s) {
         char[] letters = s.toCharArray();;
         boolean[][] dp = new boolean[letters.length+1][letters.length+1];
@@ -33,7 +33,7 @@ public class longestPalindromic {
         return dp[i][j];
     }
 
-    // enumerate approach
+    // enumerate approach O(n^3)
     public int longestPalindromeEnumerate(String s) {
         int longest = 0;
         for (int i = 0; i < s.length(); i++) {

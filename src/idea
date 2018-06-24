@@ -33,3 +33,4 @@ tips：
 5. <<  Left shifting as a quick way to multiply by 2.
 6. 区间问题常用扫描线，拆分起点终点。
 7. priorityQueue allows duplicate but treeSet does not
+8. override comparator的时候，比较object a和object b，假如返回的值小于零，则以a b返回；假如返回的值大于零，则以b a返回

@@ -39,6 +39,8 @@ public class skyline {
 
         PriorityQueue<Integer> pq;
         pq = new PriorityQueue<>(Collections.reverseOrder());
+        // pq 要存一个地平线的值0
+        // 要记录前一时刻的最高高度
         pq.offer(0);
         int prev_height = 0;
         for(point p : points) {
