@@ -1,4 +1,4 @@
-package twoPointers;
+package stringOperation;
 
 public class strStr {
 

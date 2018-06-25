@@ -22,6 +22,7 @@ public class LIS {
     }
 
     /** 674. Longest Continuous Increasing Subsequence */
+    /** or Longest Increasing Substring */
     // O(n)
     public int findLengthOfLCIS(int[] nums) {
         if(nums.length==0) return 0;
