@@ -15,7 +15,7 @@ public class heaters {
         }
         return radius;
     }
-    // 找距离houses[i]最近的heater[j]的heater[j]-houses[i]值
+    // 找距离houses[i]最近的heater[j]的heater[j]-houses[i] (radius)值
     private int binarySearch(int[] heaters, int target) {
         int l = 0, r = heaters.length - 1;
         while(l + 1 < r) {

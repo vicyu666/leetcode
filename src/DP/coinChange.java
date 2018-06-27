@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class coinChange {
     // O(m * n)
+    // dp[i] 代表组合成总和为i时所需要的最少的硬币数量
     public int coinChange(int[] coins, int amount) {
         if(coins == null || coins.length == 0 || amount <= 0) {
             return 0;

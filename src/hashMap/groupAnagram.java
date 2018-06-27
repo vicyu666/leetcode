@@ -1,9 +1,6 @@
 package hashMap;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class groupAnagram {
 
@@ -33,28 +30,36 @@ public class groupAnagram {
     }
 
     /** 438. Find All Anagrams in a String */
-    // O(n*m) not very efficiency
-    // using sliding window approach to improve the time complexity to O(n)
-
+    // sliding window approach to improve the time complexity to O(n)
+    // Arrays.deepEquals() for array of object
+    // 同string的比较相等
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> res = new ArrayList<>();
-        if (s == null || s.length() == 0 || p == null || p.length() == 0) return res;
-        int sLen = s.length(), pLen = p.length();
-        String standard = encode(p);
-        for(int i=0;i+pLen-1<sLen;i++) {
-            String curr = encode(s.substring(i,i+pLen));
-            if(curr.equals(standard)) res.add(i);
+        if (s == null || s.length() == 0 || p == null || p.length() == 0) {
+            return res;
         }
-        return res;
-    }
-    private String encode(String p) {
-        int[] dict = new int[26];
-        for(int i=0;i<p.length();i++) {
-            dict[p.charAt(i)-'a']++;
+        int sLength = s.length();
+        int pLength = p.length();
+        if(sLength < pLength) {
+            return res;
         }
-        String res = "";
-        for(int i : dict) {
-            res += (i+"/");
+        int[] standard = new int[26];
+        int[] window = new int[26];
+        // 初始状态用小循环更新
+        for(int i=0; i<pLength; i++) {
+            standard[p.charAt(i) - 'a']++;
+            window[s.charAt(i) - 'a']++;
+        }
+        if(Arrays.equals(window, standard)) {
+            res.add(0);
+        }
+        // 剩余状态滑动窗口
+        for(int i=pLength; i<sLength; i++) {
+            window[s.charAt(i-pLength) - 'a']--;
+            window[s.charAt(i) - 'a']++;
+            if(Arrays.equals(window, standard)) {
+                res.add(i-pLength+1);
+            }
         }
         return res;
     }

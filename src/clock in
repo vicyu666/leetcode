@@ -20,11 +20,11 @@
      memorizationSearch(coinInLine I II III) 10
 6.21 dp(longestPalindromicSub I II burstBalloon) hashMap(Isomorphic) 4
 6.22 tree(minDiffBST, minDepth, isValidBST) dp(editDistance, wildcardMatching, regularExpression) 6
-6.23 reviewed (trapWt, skyline, mtRoom, LIP2D, burstBL) 3
+6.23 reviewed (trapWt, skyline, mtRoom, burstBL) 3
 6.24 LCA dp(coinChange) stringOP(rToi, iTor, aToi) 5
-6.25
-6.26
-6.27
+**搬家**6.25 stringOP(rotateDigit) reviewed(LIP2D) 1
+**搬家**6.26 dp(frogJump, jumpGame, ClimbStair I II, decodeWays) design(Twitter) 6
+6.27 array(nextPermutation) dp(word break I II) slidingWindow(anagram) hashMap(wordPattern) 5
 6.28
 6.29
 6.30

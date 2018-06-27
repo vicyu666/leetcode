@@ -63,4 +63,35 @@ public class uniquePath {
         }
         return dp[row-1][col-1];
     }
+
+    /** 746. Min Cost Climbing Stairs */
+    // warm up
+    // 1 or 2 steps each time, how many ways to get to nth.
+    public int climbStairs(int n) {
+        if(n < 2) {
+            return 1;
+        }
+        int[] dp = new int[n+1];
+        dp[0] = 0;
+        dp[1] = 1;
+        dp[2] = 2;
+        for(int i=3; i<n+1; i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
+    }
+
+    // dp[i] 代表到达index i所需最少花费
+    // dp长度多一位是因为要go through完原数组，即到达len+1位
+    public int minCostClimbingStairs(int[] cost) {
+        int len = cost.length;
+        int[] dp = new int[len+1];
+        // you can either start from index 0 or index 1
+        // so the minimum cost to get to index 0 and 1 is 0
+        // thus dp[0] = dp[1] = 0
+        for(int i=2; i<len+1; i++) {
+            dp[i] = Math.min(dp[i-1]+cost[i-1],dp[i-2]+cost[i-2]);
+        }
+        return dp[len];
+    }
 }
